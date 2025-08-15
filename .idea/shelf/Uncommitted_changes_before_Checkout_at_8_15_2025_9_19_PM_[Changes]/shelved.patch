@@ -1,0 +1,110 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Main {\r\n    public static void main(String[] args) {\r\n\r\n        StudentInfo student1 = new StudentInfo(\"Bartolomeo K\", 23, \"SBMA\", 95, 92, 91);\r\n        StudentInfo student2 = new StudentInfo(\"Hunter K\", 19, \"CRIM\", 80, 84, 87);\r\n        StudentInfo student3 = new StudentInfo(\"Miming\", 19, \"BSIT\", 91, 92, 93);\r\n\r\n        int passingCount = 0;\r\n\r\n\r\n        System.out.println(\" \");\r\n        student1.displayInfo();\r\n        double avg1 = student1.calculateAverage();\r\n        System.out.println(\"Average: \" + avg1);\r\n        String grade1 = student1.getGrade();\r\n        System.out.println(\"Letter Grade: \" + grade1);\r\n        boolean pass1 = student1.isPassing();\r\n        if (pass1) {\r\n            System.out.println(\"Status: PASSING\");\r\n            passingCount++;\r\n        } else {\r\n            System.out.println(\"Status: FAILING\");\r\n        }\r\n\r\n\r\n        System.out.println(\" \");\r\n        student2.displayInfo();\r\n        double avg2 = student2.calculateAverage();\r\n        System.out.println(\"Average: \" + avg2);\r\n        String grade2 = student2.getGrade();\r\n        System.out.println(\"Letter Grade: \" + grade2);\r\n        boolean pass2 = student2.isPassing();\r\n        if (pass2) {\r\n            System.out.println(\"Status: PASSING\");\r\n            passingCount++;\r\n        } else {\r\n            System.out.println(\"Status: FAILING\");\r\n        }\r\n\r\n\r\n        System.out.println(\" \");\r\n        student3.displayInfo();\r\n        double avg3 = student3.calculateAverage();\r\n        System.out.println(\"Average: \" + avg3);\r\n        String grade3 = student3.getGrade();\r\n        System.out.println(\"Letter Grade: \" + grade3);\r\n        boolean pass3 = student3.isPassing();\r\n        if (pass3) {\r\n            System.out.println(\"Status: PASSING\");\r\n            passingCount++;\r\n        } else {\r\n            System.out.println(\"Status: FAILING\");\r\n        }\r\n\r\n        System.out.println(\" \");\r\n        System.out.println(\"Summary: \" + passingCount + \" out of 3 students are passing.\");\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 4d4e9459dfc98c928389321b4f374b64f128612f)
++++ b/src/Main.java	(date 1755263675306)
+@@ -1,58 +1,15 @@
++//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
++// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+ public class Main {
+     public static void main(String[] args) {
+-
+-        StudentInfo student1 = new StudentInfo("Bartolomeo K", 23, "SBMA", 95, 92, 91);
+-        StudentInfo student2 = new StudentInfo("Hunter K", 19, "CRIM", 80, 84, 87);
+-        StudentInfo student3 = new StudentInfo("Miming", 19, "BSIT", 91, 92, 93);
+-
+-        int passingCount = 0;
+-
+-
+-        System.out.println(" ");
+-        student1.displayInfo();
+-        double avg1 = student1.calculateAverage();
+-        System.out.println("Average: " + avg1);
+-        String grade1 = student1.getGrade();
+-        System.out.println("Letter Grade: " + grade1);
+-        boolean pass1 = student1.isPassing();
+-        if (pass1) {
+-            System.out.println("Status: PASSING");
+-            passingCount++;
+-        } else {
+-            System.out.println("Status: FAILING");
+-        }
+-
++        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
++        // to see how IntelliJ IDEA suggests fixing it.
++        System.out.printf("Hello and welcome!");
+ 
+-        System.out.println(" ");
+-        student2.displayInfo();
+-        double avg2 = student2.calculateAverage();
+-        System.out.println("Average: " + avg2);
+-        String grade2 = student2.getGrade();
+-        System.out.println("Letter Grade: " + grade2);
+-        boolean pass2 = student2.isPassing();
+-        if (pass2) {
+-            System.out.println("Status: PASSING");
+-            passingCount++;
+-        } else {
+-            System.out.println("Status: FAILING");
++        for (int i = 1; i <= 5; i++) {
++            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
++            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
++            System.out.println("i = " + i);
+         }
+-
+-
+-        System.out.println(" ");
+-        student3.displayInfo();
+-        double avg3 = student3.calculateAverage();
+-        System.out.println("Average: " + avg3);
+-        String grade3 = student3.getGrade();
+-        System.out.println("Letter Grade: " + grade3);
+-        boolean pass3 = student3.isPassing();
+-        if (pass3) {
+-            System.out.println("Status: PASSING");
+-            passingCount++;
+-        } else {
+-            System.out.println("Status: FAILING");
+-        }
+-
+-        System.out.println(" ");
+-        System.out.println("Summary: " + passingCount + " out of 3 students are passing.");
+     }
+ }
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 4d4e9459dfc98c928389321b4f374b64f128612f)
++++ /dev/null	(revision 4d4e9459dfc98c928389321b4f374b64f128612f)
+@@ -1,5 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Environment-dependent path to Maven home directory
+-/mavenHomeManager.xml
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"valhalla-ea-23\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 4d4e9459dfc98c928389321b4f374b64f128612f)
++++ b/.idea/misc.xml	(date 1755263809228)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="valhalla-ea-23" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" project-jdk-name="valhalla-ea-23 (2)" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
