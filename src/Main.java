@@ -1,17 +1,18 @@
 import java.util.ArrayList;
 
 
-class Book {
+class Food {
+
     private String title;
     private String author;
     private ArrayList<Integer> ratings;
-    private static int totalBooks = 0;
+    private static int totalFoods = 0;
 
-    public Book(String title, String author) {
+    public Food(String title, String buyer) {
         this.title = title;
-        this.author = author;
+        this.author = buyer;
         this.ratings = new ArrayList<>();
-        totalBooks++;
+        totalFoods++;
     }
 
     public void addRating(int rating) throws IllegalArgumentException {
@@ -27,10 +28,10 @@ class Book {
     }
 
     public String getPopularityLevel(int i) {
-        if (ratings.isEmpty()) return "No ratings";
+        if (ratings.isEmpty()) return "No items";
         double avg = getAverageRating();
         if (avg >= 4.5) return "Excellent";
-        if (avg >= 3.5) return "Good";
+        if (avg >= 3.5) return "Small";
         if (avg >= 2.5) return "Average";
         if (avg >= 1.5) return "Poor";
         return "Terrible";
@@ -41,20 +42,21 @@ class Book {
             try {
                 addRating(rating);
             } catch (IllegalArgumentException e) {
-                System.out.println("Error: Invalid rating: must be 1-5 stars");
+                System.out.println("Error: Invalid price: must be greater than 0");
             }
         }
     }
 
-    public static int getTotalBooks() { return totalBooks; }
+    public static int getTotalFood() { return totalFoods; }
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
 
-    public String displayBook() {
-        return String.format("Book: %s by %s, Average Rating: %.1f, Level: %s",
+    public String displayFood() {
+        return String.format("Food: %s by %s, Average Rating: %.1f, Level: %s",
                 title, author, getAverageRating(), getPopularityLevel(1));
     }
 }
+
 
 
 
